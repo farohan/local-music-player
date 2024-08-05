@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Music Player</h1>
+        <label for="fileInput" id="fileInputLabel">Choose Files</label>
+        <input type="file" id="fileInput" accept="audio/*" multiple>
+        <div id="player">
+            <audio id="audioPlayer"></audio>
+            <div id="customControls">
+                <button id="playPauseBtn">Play</button>
+                <span id="currentTime">00:00</span> / <span id="duration">00:00</span>
+                <input type="range" id="progressBar" value="0" max="100">
+            </div>
+            <div id="trackInfo"></div>
+        </div>
+        <ul id="playlist"></ul>
+    </div>
+
+    <!-- Custom Context Menu -->
+    <div id="customContextMenu" class="context-menu">
+        <ul>
+            <li id="menuOption1">Keep listening to your music.</li>
+        </ul>
+    </div>
+
+    <!-- Custom Modal -->
+    <div id="customModal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <p>No need to peek. Keep listening.</p>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
