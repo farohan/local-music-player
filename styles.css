@@ -1,0 +1,231 @@
+/* Dark Futuristic Theme */
+
+body {
+    font-family: 'Roboto Mono', monospace;
+    background-color: #121212;
+    color: #e0e0e0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 500px;
+    background: #1e1e1e;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+    text-align: center;
+    border: 2px solid #333;
+}
+
+h1 {
+    color: #ffffff;
+    margin-bottom: 20px;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+}
+
+#fileInput {
+    display: none;
+}
+
+#fileInputLabel {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #ffffff;
+    border: 2px solid #555;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-weight: bold;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.1);
+}
+
+#fileInputLabel:hover {
+    background-color: #555;
+    color: #ffffff;
+}
+
+#player {
+    margin-top: 20px;
+}
+
+#audioPlayer {
+    display: none;
+}
+
+#customControls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+#playPauseBtn {
+    background-color: #333;
+    color: #ffffff;
+    border: 2px solid #555;
+    border-radius: 4px;
+    padding: 8px 16px;
+    cursor: pointer;
+    margin-right: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-family: inherit;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.1);
+}
+
+#playPauseBtn:hover {
+    background-color: #555;
+    color: #ffffff;
+}
+
+#currentTime, #duration {
+    font-size: 14px;
+    color: #b0b0b0;
+    text-shadow: 0 0 3px rgba(255, 255, 255, 0.1);
+}
+
+#progressBar {
+    width: 100%;
+    max-width: 300px;
+    margin-left: 20px;
+    background-color: #333;
+    border: none;
+    height: 5px;
+    appearance: none;
+    cursor: pointer;
+}
+
+#progressBar::-webkit-slider-thumb {
+    width: 15px;
+    height: 15px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    cursor: pointer;
+    appearance: none;
+}
+
+#progressBar::-moz-range-thumb {
+    width: 15px;
+    height: 15px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#trackInfo {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #b0b0b0;
+    text-shadow: 0 0 3px rgba(255, 255, 255, 0.1);
+}
+
+#playlist {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+    text-align: left;
+}
+
+#playlist li {
+    padding: 10px;
+    border-bottom: 1px solid #444;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    color: #e0e0e0;
+    font-size: 14px;
+    text-shadow: 0 0 3px rgba(255, 255, 255, 0.1);
+}
+
+#playlist li:hover {
+    background-color: #222;
+    color: #ffffff;
+}
+
+#playlist li.active {
+    background-color: #555;
+    color: #ffffff;
+    font-weight: bold;
+    text-shadow: none;
+}
+
+/* Custom Context Menu */
+
+.context-menu {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    border: 1px solid #555;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    min-width: 150px;
+}
+
+.context-menu ul {
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+}
+
+.context-menu ul li {
+    padding: 8px 20px;
+    cursor: pointer;
+    color: #ffffff;
+    transition: background-color 0.3s ease;
+    font-size: 14px;
+}
+
+.context-menu ul li:hover {
+    background-color: #555;
+}
+
+/* Custom Modal */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+    background-color: #1e1e1e;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 12px;
+    width: 80%;
+    max-width: 500px;
+    color: #e0e0e0;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+}
+
+.modal-close {
+    color: #ffffff;
+    float: right;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.modal-close:hover {
+    color: #aaaaaa;
+}
+
+.modal-content p {
+    font-size: 16px;
+}
